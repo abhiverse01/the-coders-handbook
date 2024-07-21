@@ -17,7 +17,7 @@ This repo contains the list of all the valuable resources, links, notes, and imp
 - [Contact](#contact)
 
 ## Introduction
-A comprehensive collection of resources, links, notes, and important collections gathered throughout my developer journey. This repository is open source and available for anyone who may find it helpful.
+A comprehensive collection of resources, links, notes, and important collections gathered throughout my developer journey. This repository is open-source and available for anyone who may find it helpful.
 
 ## Notes
 
