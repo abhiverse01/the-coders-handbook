@@ -1,6 +1,6 @@
 # Info
 - This document ensembles the various key information and details that you learn throughout the years as a developer.
-- There's a lot ot workflows, how-to's, extension meanings, data structure representations that we learn as we go around using them.
+- There's a lot of workflows, how-to's, extension meanings, and data structure representations that we learn as we go around using them.
 - It'd be better if you get to know it right away, to explore further from it, so that you don't have to start from entire scratch on your development journey.
 
 
@@ -25,9 +25,9 @@
   python = "^3.8"
   requests = "^2.25.1"
   ```
--- .toml File:
--- Configuration: Provides a structured way to manage project configurations and dependencies.
--- Readability: Its simple syntax makes it easy to read and write.
+- .toml File:
+- Configuration: Provides a structured way to manage project configurations and dependencies.
+- Readability: Its simple syntax makes it easy to read and write.
 
 ## .lock File
 
@@ -48,9 +48,9 @@
   optional = false
   python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, <4"
   ```
--- .lock File:
--- Consistency: Ensures all developers and environments use the exact same versions of dependencies.
--- Reproducibility: Facilitates the recreation of the environment as it was when the lock file was generated.
+- .lock File:
+- Consistency: Ensures all developers and environments use the same versions of dependencies.
+- Reproducibility: Facilitates the recreation of the environment as it was when the lock file was generated.
   
 ## .yml and .yaml File
 
@@ -73,9 +73,9 @@
         - DATABASE_URL=postgresql://user:password@localhost:5432/mydatabase
   ```
 
--- .yml and .yaml Files:
--- Flexibility: Used across various domains for configuration, from software development to infrastructure as code.
--- Clarity: The human-readable format helps in understanding complex configurations and setups.
+- .yml and .yaml Files:
+-  Flexibility: Used across various domains for configuration, from software development to infrastructure as code.
+- Clarity: The human-readable format helps in understanding complex configurations and setups.
 
   
 
