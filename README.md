@@ -1,10 +1,28 @@
+
+
+
+
+---
+
 # The Coder's Handbook
 
 This repo contains the list of all the valuable resources, links, notes, and important collections that I utilized and collected throughout my developer journey. Keeping it open source, if anybody ever feels the guide for it.
 
 ## Table of Contents
 - [Introduction](#introduction)
-- [Becoming an Expert coder](#becominganexpertcoder)
+- [Becoming an Expert Coder](#becoming-an-expert-coder)
+  - [Foundations of Programming](#foundations-of-programming)
+  - [Advanced Programming Concepts](#advanced-programming-concepts)
+  - [Data Structures and Algorithms](#data-structures-and-algorithms)
+  - [Software Development Practices](#software-development-practices)
+  - [Working with APIs and Databases](#working-with-apis-and-databases)
+  - [Web Development Essentials](#web-development-essentials)
+  - [DevOps and CI/CD](#devops-and-cicd)
+  - [Coding for Performance](#coding-for-performance)
+  - [Real-World Application Development](#real-world-application-development)
+  - [Soft Skills for Coders](#soft-skills-for-coders)
+  - [Special Topics](#special-topics)
+  - [Career Growth and Professional Development](#career-growth-and-professional-development)
 - [Notes](#notes)
   - [Development Notes](#development-notes)
   - [Project Go-Through Notes](#project-go-through-notes)
@@ -19,6 +37,9 @@ This repo contains the list of all the valuable resources, links, notes, and imp
 
 ## Introduction
 A comprehensive collection of resources, links, notes, and important collections gathered throughout my developer journey. This repository is open-source and available for anyone who may find it helpful.
+
+## Becoming an Expert Coder
+An in-depth guide to mastering coding, covering everything from foundational programming to advanced development practices and professional growth.
 
 ## Notes
 
@@ -54,3 +75,7 @@ For any inquiries or suggestions, feel free to reach out.
 #
 
 <p align="center"><strong>Abhishek Shah | 2024</strong></p>
+
+---
+
+
