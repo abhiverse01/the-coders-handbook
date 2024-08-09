@@ -4,6 +4,7 @@ This repo contains the list of all the valuable resources, links, notes, and imp
 
 ## Table of Contents
 - [Introduction](#introduction)
+- [Becoming an Expert coder](#becominganexpertcoder)
 - [Notes](#notes)
   - [Development Notes](#development-notes)
   - [Project Go-Through Notes](#project-go-through-notes)
