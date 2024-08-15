@@ -1,8 +1,4 @@
-
-
-
-
----
+#
 
 # The Coder's Handbook
 
