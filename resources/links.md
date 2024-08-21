@@ -9,3 +9,8 @@
 - [Build an end-to-end ML Pipeline](https://www.labellerr.com/blog/end-to-end-ml-pipeline/) - Article that extensively describes how an end-to-end ML pipeline can be developed from Scratch. 
 
 
+# NLP Resources:
+- [Word2Vec Tutorial](https://radimrehurek.com/gensim/auto_examples/tutorials/run_word2vec.html#sphx-glr-auto-examples-tutorials-run-word2vec-py) - This Word2Vec tutorial is quite a good place to start and learn about loading, using pre-built models on pre-existing corpus related to Word2Vec usage implementations.
+
+
+
