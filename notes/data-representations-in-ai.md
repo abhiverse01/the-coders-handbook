@@ -1,7 +1,5 @@
 ## Data Representation Methods In AI:
 
----
-
 ### **1. Embeddings**
 
 **Quantitative:**
