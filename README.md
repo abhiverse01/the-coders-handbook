@@ -70,7 +70,7 @@ For any inquiries or suggestions, feel free to reach out.
 
 #
 
-<p align="center"><strong>Abhishek Shah | 2024</strong></p>
+<p align="center"><strong>Abhishek Shah | The Coder's Handbook | 2024</strong></p>
 
 #
 
