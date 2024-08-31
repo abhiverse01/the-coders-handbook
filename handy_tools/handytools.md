@@ -86,4 +86,8 @@
 | **Traqq**       | A time tracking and productivity management tool designed for individuals and teams, with automated tracking and monitoring features. | Free plan available; Premium plans start at $6/user/month |
 
 #
-- This extended list should provide a comprehensive overview of tools useful for different domains, complete with pricing details and descriptions to help developers and teams choose the right tools for their needs.
+This extended list should provide a comprehensive overview of tools useful for different domains, complete with pricing details and descriptions to help developers and teams choose the right tools for their needs.
+
+---
+
+**© 2024 Abhishek Shah | The Coder's Handbook**
