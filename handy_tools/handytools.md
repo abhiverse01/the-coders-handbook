@@ -91,3 +91,4 @@ This extended list should provide a comprehensive overview of tools useful for d
 ---
 
 **© 2024 Abhishek Shah | The Coder's Handbook**
+<p style="text-align: center; font-size: smaller;">© 2024 Abhishek Shah, The Coder's Handbook</p>
