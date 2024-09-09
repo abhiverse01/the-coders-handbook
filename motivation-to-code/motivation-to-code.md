@@ -67,7 +67,7 @@ Learning to code can be approached in various ways, and incorporating real-world
 ### Conclusion:
 Learning to code involves building a solid foundation, continuously practising, and tackling real-world problems. By drawing inspiration from the stories of successful individuals, you can adopt a mindset of perseverance, curiosity, and innovation. Whether you are starting with basic projects or contributing to open source, each step will take you closer to mastery.
 
-
+#
 
 ## What Motivates You to Code?? How do you approach it??
 Share yours for inspiring the next gen. 
