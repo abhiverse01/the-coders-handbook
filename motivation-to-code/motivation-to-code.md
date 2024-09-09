@@ -70,4 +70,4 @@ Learning to code involves building a solid foundation, continuously practising, 
 #
 
 ## What Motivates You to Code?? How do you approach it??
-Share yours for inspiring the next gen. 
+- Share yours for inspiring the next gen. 
