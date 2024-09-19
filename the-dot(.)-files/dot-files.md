@@ -1,4 +1,6 @@
-Folders and files that start with a dot (`.`) are considered **hidden files** or **hidden directories** in Unix-like operating systems (such as Linux and macOS). These are typically configuration files or metadata that are not meant to be visible during normal file browsing. Here are common types of files or folders that start with a dot:
+# The Dot(.) Files
+
+- Folders and files that start with a dot (`.`) are considered **hidden files** or **hidden directories** in Unix-like operating systems (such as Linux and macOS). These are typically configuration files or metadata that are not meant to be visible during normal file browsing. Here are common types of files or folders that start with a dot:
 
 ### 1. **.env**
    - **Purpose**: Environment configuration files used to store environment variables such as API keys, database credentials, and other sensitive data.
