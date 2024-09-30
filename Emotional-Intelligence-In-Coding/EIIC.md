@@ -5,7 +5,7 @@ Emotional Intelligence (EI) is more than just a trendy term; it’s a transforma
 
 ### 1. Understanding Emotional Intelligence (EI)
 
-**Definition and Relevance:**
+**Definition and Relevance:**  
 Emotional intelligence encompasses five core components:
 
 1. **Self-Awareness:** The cornerstone of EI, self-awareness involves recognizing one's emotions and understanding how they influence thoughts and behavior. This can be illustrated by the **Self-Awareness Equation**:
@@ -48,7 +48,7 @@ Emotional intelligence encompasses five core components:
 
    Strong social skills enhance teamwork and foster a collaborative atmosphere. “The single biggest problem in communication is the illusion that it has taken place,” said George Bernard Shaw.
 
-**Why EI Matters in Tech:**
+**Why EI Matters in Tech:**  
 Coding is often perceived as a solitary activity, yet it fundamentally relies on teamwork, communication, and collective problem-solving. High EI leads to:
 - **Improved Collaboration:** Teams with high EI communicate effectively, enhancing understanding and cooperation.
 - **Reduced Conflicts:** A supportive environment minimizes misunderstandings and fosters conflict resolution.
