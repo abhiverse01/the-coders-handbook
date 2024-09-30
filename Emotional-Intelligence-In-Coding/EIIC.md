@@ -9,9 +9,8 @@ Emotional Intelligence (EI) is more than just a trendy term; it’s a transforma
 Emotional intelligence encompasses five core components:
 
 1. **Self-Awareness:** The cornerstone of EI, self-awareness involves recognizing one's emotions and understanding how they influence thoughts and behavior. This can be illustrated by the **Self-Awareness Equation**:
-   \[
-   \text{Self-Awareness} = \frac{\text{Recognition of Emotions}}{\text{Judgment of Emotions}}
-   \]
+   $$\text{Self-Awareness} = \frac{\text{Recognition of Emotions}}{\text{Judgment of Emotions}}$$
+
    High self-awareness means understanding emotions without letting them cloud your judgment. As Aristotle wisely noted, “Knowing yourself is the beginning of all wisdom.”
 
 2. **Self-Regulation:** This is the ability to manage one’s emotions effectively. The **Self-Regulation Formula** can be conceptualized as:
