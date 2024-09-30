@@ -9,29 +9,32 @@ Emotional Intelligence (EI) is more than just a trendy term; it’s a transforma
 Emotional intelligence encompasses five core components:
 
 1. **Self-Awareness:** The cornerstone of EI, self-awareness involves recognizing one's emotions and understanding how they influence thoughts and behavior. This can be illustrated by the **Self-Awareness Equation**:
-   $$\text{Self-Awareness} = \frac{\text{Recognition of Emotions}}{\text{Judgment of Emotions}}$$
+
+   $$
+   \text{Self-Awareness} = \frac{\text{Recognition of Emotions}}{\text{Judgment of Emotions}}
+   $$
 
    High self-awareness means understanding emotions without letting them cloud your judgment. As Aristotle wisely noted, “Knowing yourself is the beginning of all wisdom.”
 
-2. **Self-Regulation:** This is the ability to manage one’s emotions effectively. The **Self-Regulation Formula** can be conceptualized as:
+3. **Self-Regulation:** This is the ability to manage one’s emotions effectively. The **Self-Regulation Formula** can be conceptualized as:
    \[
    \text{Self-Regulation} = \text{Impulse Control} + \text{Emotional Response}
    \]
    Effective self-regulation fosters calmness under pressure—essential in high-stress coding environments. Remember, as Victor Frankl said, “Between stimulus and response, there is a space. In that space is our power to choose our response.”
 
-3. **Motivation:** This involves harnessing emotions to pursue goals. We can express motivation as:
+4. **Motivation:** This involves harnessing emotions to pursue goals. We can express motivation as:
    \[
    \text{Motivation} = \text{Passion} \times \text{Persistence}
    \]
    Coders driven by intrinsic motivation are often more innovative and resilient. As Maya Angelou remarked, “Nothing will work unless you do.”
 
-4. **Empathy:** This is the capacity to understand and share the feelings of others. Empathy can be framed through the **Empathy Framework**:
+5. **Empathy:** This is the capacity to understand and share the feelings of others. Empathy can be framed through the **Empathy Framework**:
    \[
    \text{Empathy} = \frac{\text{Perspective-Taking}}{\text{Judgment}}
    \]
    Cultivating empathy leads to better collaboration. As Harper Lee wrote, “You never really understand a person until you consider things from his point of view.”
 
-5. **Social Skills:** These skills enable the building of rapport and effective relationship management. The **Social Skills Equation** can be illustrated as:
+6. **Social Skills:** These skills enable the building of rapport and effective relationship management. The **Social Skills Equation** can be illustrated as:
    \[
    \text{Social Skills} = \text{Communication} + \text{Conflict Resolution}
    \]
