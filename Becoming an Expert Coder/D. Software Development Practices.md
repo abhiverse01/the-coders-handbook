@@ -26,7 +26,7 @@
 - **GitHub:**
   - GitHub is a web-based platform that uses Git for version control. It provides a collaborative environment for developers, including features like pull requests, issues, code review, and project management tools.
   - **Using GitHub:**
-    - **Forking:** You can fork a repository, creating your own copy of it on GitHub. This is useful for contributing to open-source projects.
+    - **Forking:** You can fork a repository, creating your copy of it on GitHub. This is useful for contributing to open-source projects.
     - **Pull Requests:** You can submit a pull request to propose changes to a project. The project maintainers can review your changes, discuss them, and decide whether to merge them.
     - **Issues:** GitHub Issues allow you to track bugs, suggest features, and manage tasks.
 
@@ -55,12 +55,12 @@ Version control is essential in any software development process. It enables col
     if __name__ == '__main__':
         unittest.main()
     ```
-  - **Benefits:** Unit tests are fast, easy to write, and help catch bugs early in the development process.
+  - **Benefits:** Unit tests are fast, easy to write and help catch bugs early in the development process.
 
 - **Integration Testing:**
   - Integration testing involves testing the interaction between different components of your application. It ensures that the components work together as expected.
   - **Example:**
-    - Suppose you have a user registration system where the frontend, backend, and database interact. An integration test would ensure that data flows correctly from the frontend to the backend and is correctly stored in the database.
+    - Suppose you have a user registration system where the frontend, backend, and database interact. An integration test would ensure that data flows correctly from the front end to the back end and is correctly stored in the database.
   - **Tools:** In Python, you might use `pytest` along with `requests` to test API endpoints.
 
 - **End-to-End (E2E) Testing:**
@@ -85,7 +85,7 @@ Testing is crucial for maintaining the quality and reliability of your software.
   - **Be Constructive:** Provide feedback that is specific, actionable, and focused on improving the code rather than criticizing the coder.
   - **Use Automated Tools:** Tools like linters and static code analyzers can automatically check for code quality issues, making the review process more efficient.
 
-**Refactoring** is the process of restructuring existing code without changing its external behavior. The goal is to improve the code's structure, readability, and maintainability.
+**Refactoring** is the process of restructuring existing code without changing its external behaviour. The goal is to improve the code's structure, readability, and maintainability.
 
 - **Why Refactor?**
   - **Improve Code Quality:** Refactoring helps to simplify complex code, remove duplication, and make the codebase easier to understand.
