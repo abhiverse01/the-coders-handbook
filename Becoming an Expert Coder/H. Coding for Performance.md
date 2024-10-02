@@ -5,7 +5,7 @@
 **Profiling** and **Benchmarking** are techniques used to measure the performance of your code, helping you identify bottlenecks and optimize your application for speed and efficiency.
 
 - **Profiling:**
-  - **Purpose:** Profiling helps you analyze the runtime behavior of your code, focusing on where your application spends the most time and which functions or methods are consuming the most resources (CPU, memory).
+  - **Purpose:** Profiling helps you analyze the runtime behaviour of your code, focusing on where your application spends the most time and which functions or methods are consuming the most resources (CPU, memory).
   - **Types of Profilers:**
     - **CPU Profilers:** Measure the time each function or method spends executing. Example tools include `cProfile` in Python, and `perf` in Linux.
     - **Memory Profilers:** Track memory usage by your application, identifying memory leaks or excessive memory consumption. Example tools include `memory_profiler` in Python, and `Valgrind` in C/C++.
@@ -62,7 +62,7 @@
 **Memory Optimization** and **CPU Optimization** are techniques aimed at reducing the resource consumption of your code, making it more efficient and scalable.
 
 - **Memory Optimization:**
-  - **Avoiding Memory Leaks:** Memory leaks occur when memory that is no longer needed is not released, causing your application to consume more memory over time. To avoid leaks, ensure that objects are properly disposed of, especially in languages like C++ where manual memory management is required.
+  - **Avoiding Memory Leaks:** Memory leaks occur when the memory that is no longer needed is not released, causing your application to consume more memory over time. To avoid leaks, ensure that objects are properly disposed of, especially in languages like C++ where manual memory management is required.
   - **Using Efficient Data Structures:** Choose data structures that use memory efficiently. For example, use a `set` instead of a `list` in Python if you need to store unique elements, as `set` operations are generally faster and use less memory.
   - **Memory Pools:** In languages like C or C++, memory pools preallocate a large block of memory and allocate objects from this pool, reducing the overhead of frequent allocations and deallocations.
   - **Object Reuse:** Reusing objects instead of creating new ones can reduce the overhead of memory allocation. For example, in a game loop, reusing the same object for each frame can be more efficient than creating and destroying objects continuously.
