@@ -212,7 +212,7 @@
 - **Higher-order functions**: Functions that take or return other functions.
 - **Generator functions**: Yield values one at a time using `yield`.
 - **Nested functions**: Functions inside other functions.
-- **Closures**: Functions that capture local state from their enclosing function.
+- **Closures**: Functions that capture the local state from their enclosing function.
 - **Coroutines**: Functions that allow asynchronous operations using `await`.
 - **Static methods**: Methods that don’t depend on instance data.
 - **Class methods**: Methods that modify class-level state.
