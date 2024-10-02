@@ -11,7 +11,7 @@
   - **HTTP Methods:** REST uses standard HTTP methods to perform operations on resources:
     - **GET:** Retrieve data from a resource (e.g., `GET /users` to get a list of users).
     - **POST:** Create a new resource (e.g., `POST /users` to create a new user).
-    - **PUT:** Update an existing resource (e.g., `PUT /users/1` to update user with ID 1).
+    - **PUT:** Update an existing resource (e.g., `PUT /users/1` to update the user with ID 1).
     - **DELETE:** Remove a resource (e.g., `DELETE /users/1` to delete user with ID 1).
   - **Statelessness:** Each request from a client to a server must contain all the information needed to understand and process the request. The server doesn’t store client context between requests.
   - **JSON:** RESTful APIs often use JSON (JavaScript Object Notation) as the data format for communication between the client and server.
@@ -44,7 +44,7 @@
 **GraphQL** is a query language for APIs that provides a more flexible and efficient way to interact with data compared to REST.
 
 - **Key Concepts of GraphQL:**
-  - **Single Endpoint:** Unlike REST, where each resource has its own URL, GraphQL uses a single endpoint for all queries and mutations.
+  - **Single Endpoint:** Unlike REST, where each resource has its URL, GraphQL uses a single endpoint for all queries and mutations.
   - **Queries:** Clients specify the structure of the response they need. This prevents over-fetching or under-fetching data.
     - Example of a GraphQL query to fetch a user's name and email:
       ```graphql
@@ -55,7 +55,7 @@
         }
       }
       ```
-  - **Mutations:** Used to modify data on the server (similar to POST, PUT, DELETE in REST).
+  - **Mutations:** Used to modify data on the server (similar to POST, PUT, and DELETE in REST).
     - Example of a GraphQL mutation to add a new user:
       ```graphql
       mutation {
@@ -171,7 +171,7 @@ NoSQL databases are essential for handling large-scale, distributed data that do
   - **SQLAlchemy (Python):** A powerful and flexible ORM for Python that supports multiple database backends.
   - **Django ORM (Python):** A high-level ORM integrated with the Django web framework, known for its ease of use.
   - **Hibernate (Java):** A widely-used ORM for Java, providing a comprehensive framework for mapping Java objects to database tables.
-  - **ActiveRecord (Ruby on Rails):** The ORM in Ruby on Rails, known for its convention over configuration approach.
+  - **ActiveRecord (Ruby on Rails):** The ORM in Ruby on Rails, is known for its convention over configuration approach.
 
 - **Example of Using an ORM (SQLAlchemy in Python):**
   ```python
@@ -213,7 +213,7 @@ NoSQL databases are essential for handling large-scale, distributed data that do
 
 ### Conclusion
 
-Working with APIs and databases is fundamental to modern software development. Understanding RESTful APIs and GraphQL allows you to build and consume services efficiently, while mastering SQL and NoSQL databases enables you to store, retrieve, and manage data effectively. ORMs simplify database interactions, and proper database integration ensures that your application remains secure, scalable, and performant.
+Working with APIs and databases is fundamental to modern software development. Understanding RESTful APIs and GraphQL allows you to build and consume services efficiently while mastering SQL and NoSQL databases enables you to store, retrieve, and manage data effectively. ORMs simplify database interactions, and proper database integration ensures that your application remains secure, scalable, and performant.
 
 ---
 
