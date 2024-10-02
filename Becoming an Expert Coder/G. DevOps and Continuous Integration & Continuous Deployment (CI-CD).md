@@ -3,7 +3,7 @@
 
 #### Containerization with Docker
 
-**Containerization** is the practice of packaging an application and its dependencies into a container, ensuring that it runs consistently across different environments. **Docker** is the most widely-used tool for creating and managing containers.
+**Containerization** is the practice of packaging an application and its dependencies into a container, ensuring that it runs consistently across different environments. **Docker** is the most widely used tool for creating and managing containers.
 
 - **Key Concepts of Docker:**
   - **Images:** A Docker image is a lightweight, standalone, and executable package that includes everything needed to run a piece of software, including the code, runtime, libraries, and system tools.
@@ -47,7 +47,7 @@ Docker is a powerful tool that simplifies the process of developing, shipping, a
 
 #### Kubernetes for Orchestration
 
-**Kubernetes** (often abbreviated as K8s) is an open-source platform designed to automate deploying, scaling, and operating application containers. It’s the industry-standard tool for container orchestration.
+**Kubernetes** (often abbreviated as K8s) is an open-source platform designed to automate deploying, scaling, and operating application containers. It’s an industry-standard tool for container orchestration.
 
 - **Key Concepts of Kubernetes:**
   - **Cluster:** A Kubernetes cluster is a set of nodes (machines) that run containerized applications. A cluster consists of a master node (which manages the cluster) and worker nodes (which run the containers).
@@ -234,11 +234,11 @@ CI/CD pipelines are essential for modern software development. They automate the
 
 **Why Use Cloud Platforms?**
 - **Scalability:** Cloud platforms allow you to scale your infrastructure up or down based on demand, providing flexibility and cost efficiency.
-- **Global Reach:** Cloud providers have data centers around the world, enabling you to deploy applications close to your users, reducing latency and improving performance.
+- **Global Reach:** Cloud providers have data centres around the world, enabling you to deploy applications close to your users, reducing latency and improving performance.
 - **Cost Management:** Pay-as-you-go pricing models allow you to only pay for the resources you use, helping to manage costs effectively.
 - **Security and Compliance:** Cloud platforms offer robust security features and compliance certifications, ensuring that your data and applications are protected.
 
-Cloud platforms are fundamental to modern application development and deployment. They provide the infrastructure, tools, and services needed to build, deploy, and scale applications in a cost-effective and efficient manner.
+Cloud platforms are fundamental to modern application development and deployment. They provide the infrastructure, tools, and services needed to build, deploy, and scale applications cost-effectively and efficiently.
 
 ### Conclusion
 
