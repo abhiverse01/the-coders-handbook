@@ -8,7 +8,7 @@ Emotional Intelligence (EI) is more than just a trendy term; it’s a transforma
 **Definition and Relevance:**  
 Emotional intelligence encompasses five core components:
 
-1. **Self-Awareness:** The cornerstone of EI, self-awareness involves recognizing one's emotions and understanding how they influence thoughts and behavior. This can be illustrated by the **Self-Awareness Equation**:
+1. **Self-Awareness:** The cornerstone of EI, self-awareness involves recognizing one's emotions and understanding how they influence thoughts and behaviour. This can be illustrated by the **Self-Awareness Equation**:
 
    `Self-Awareness = Recognition of Emotions / Judgment of Emotions`
 
@@ -50,13 +50,13 @@ Coding is often perceived as a solitary activity, yet it fundamentally relies on
 - **Feedback Loops:** Implement structured feedback methods such as the SBI Model (Situation-Behavior-Impact) to ensure constructive criticism.
 
 **Strategies for Promoting Trust:**
-- **Safe Spaces:** Create environments where team members feel safe to share thoughts and vulnerabilities. This could involve anonymous feedback systems or regular team retrospectives focused on emotional experiences.
-- **Team-Building Exercises:** Incorporate activities that encourage vulnerability, such as sharing personal stories or engaging in team retreats focused on emotional connectivity.
+Safe Spaces:** Create environments where team members feel safe sharing thoughts and vulnerabilities. This could involve anonymous feedback systems or regular team retrospectives focused on emotional experiences.
+- **Team-Building Exercises:** Incorporate activities encouraging vulnerability, such as sharing personal stories or engaging in team retreats focused on emotional connectivity.
 
 ## 3. Conflict Resolution
 
 **Constructive Management of Disagreements:**
-- **Active Listening Techniques:** Teach techniques like mirroring (repeating back what someone has said to confirm understanding) to enhance listening skills.
+- **Active Listening Techniques:** Teach techniques like mirroring (repeating what someone has said to confirm understanding) to enhance listening skills.
 - **Role-Playing Scenarios:** Engage teams in simulated conflict situations to practice de-escalation techniques and collaborative problem-solving.
 
 **Building a Culture of Respect:**
