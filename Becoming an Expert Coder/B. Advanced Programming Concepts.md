@@ -2,7 +2,7 @@
 
 ## Object-Oriented Programming (OOP)
 
-**Object-Oriented Programming (OOP)** is a programming paradigm centered around objects rather than actions. In OOP, you structure your code by creating classes that represent real-world entities, and objects are instances of these classes. This approach makes it easier to manage and scale complex software projects by organizing code into reusable, modular components.
+**Object-Oriented Programming (OOP)** is a programming paradigm centred around objects rather than actions. In OOP, you structure your code by creating classes that represent real-world entities, and objects are instances of these classes. This approach makes it easier to manage and scale complex software projects by organizing code into reusable, modular components.
 
 ### Key Principles of OOP:
 
@@ -10,7 +10,7 @@
 
 - **Abstraction**: Hiding complex implementation details and exposing only the necessary parts of an object. Abstraction simplifies the interaction with objects, as you don't need to understand their internal workings. This is achieved through interfaces and abstract classes that define what actions an object can perform without revealing how those actions are executed.
 
-- **Inheritance**: Creating new classes based on existing ones. This allows for code reuse and the extension of existing functionality. Inheritance promotes a hierarchical classification where a child class inherits attributes and behaviors from a parent class but can also have additional properties or methods.
+- **Inheritance**: Creating new classes based on existing ones. This allows for code reuse and the extension of existing functionality. Inheritance promotes a hierarchical classification where a child class inherits attributes and behaviours from a parent class but can also have additional properties or methods.
 
 - **Polymorphism**: The ability to treat objects of different classes through the same interface. This allows for methods to be defined in a base class and overridden in derived classes, enabling the same method to behave differently depending on the object calling it. Polymorphism enhances flexibility and integration, allowing new classes to be introduced with minimal impact on existing code.
 
@@ -18,7 +18,7 @@ OOP is fundamental in modern programming because it mirrors the way we think abo
 
 ## Classes and Objects
 
-**Classes** are blueprints for creating objects. They define the properties (attributes) and behaviors (methods) that the objects created from them will have.
+**Classes** are blueprints for creating objects. They define the properties (attributes) and behaviours (methods) that the objects created from them will have.
 
 ### Defining a Class:
 
@@ -170,7 +170,7 @@ Inheritance, polymorphism, and encapsulation are the pillars of OOP. They enable
 
 - **Pure Functions**: A pure function is one that, given the same inputs, will always produce the same output and has no side effects (e.g., modifying global variables). Pure functions are predictable and easier to test.
 
-- **Higher-Order Functions**: Functions that can take other functions as arguments or return them as results. This allows for more abstract and flexible code, promoting reuse and composability.
+- **Higher-order functions**: Functions that can take other functions as arguments or return them as results. This allows for more abstract and flexible code, promoting reuse and composability.
 
 - **Immutability**: Data is not modified after it’s created. Instead, new data structures are created when you need to change something. This approach reduces bugs and simplifies reasoning about code.
 
@@ -190,7 +190,7 @@ def add(a, b):
     return a + b
 ```
 
-**Higher-Order Functions** are functions that take other functions as parameters or return functions as their result. They allow you to create more abstract and flexible code.
+**Higher-order functions** are functions that take other functions as parameters or return functions as their result. They allow you to create more abstract and flexible code.
 
 ### Example of Higher-Order Function:
 
@@ -209,7 +209,7 @@ Pure functions and higher-order functions are core to functional programming, en
 
 ## Recursion vs Iteration
 
-**Recursion** is a technique where a function calls itself in order to solve a problem. Each recursive call works on a smaller instance of the same problem until a base case is reached.
+**Recursion** is a technique where a function calls itself to solve a problem. Each recursive call works on a smaller instance of the same problem until a base case is reached.
 
 ### Example of Recursion:
 
@@ -239,7 +239,7 @@ Recursion is powerful for problems that can be broken down into smaller, similar
 
 ## Memory Management and Optimization
 
-**Memory Management** involves controlling the allocation, usage, and deallocation of memory in a program to avoid issues like memory leaks, which occur when memory that is no longer needed is not released.
+**Memory Management** involves controlling the allocation, usage, and deallocation of memory in a program to avoid issues like memory leaks, which occur when the memory that is no longer needed is not released.
 
 ### Types of Memory Management:
 
