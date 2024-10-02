@@ -25,7 +25,7 @@
       </html>
       ```
 
-**CSS (Cascading Style Sheets)** is used to control the appearance of HTML elements. It defines the layout, colors, fonts, and overall visual style of a web page.
+**CSS (Cascading Style Sheets)** is used to control the appearance of HTML elements. It defines the layout, colours, fonts, and overall visual style of a web page.
 
 - **Key Concepts of CSS:**
   - **Selectors:** Selectors are used to target HTML elements. Common selectors include element selectors (e.g., `p`), class selectors (e.g., `.classname`), and ID selectors (e.g., `#idname`).
@@ -95,7 +95,7 @@
         .catch(error => console.error('Error:', error));
       ```
 
-HTML, CSS, and JavaScript form the core of web development. HTML structures the content, CSS styles it, and JavaScript brings it to life with interactivity and dynamic behavior.
+HTML, CSS, and JavaScript form the core of web development. HTML structures the content, CSS styles it and JavaScript brings it to life with interactivity and dynamic behavior.
 
 #### Frontend Frameworks (React, Angular, Vue.js)
 
@@ -104,7 +104,7 @@ HTML, CSS, and JavaScript form the core of web development. HTML structures the 
 - **React:**
   - **Developed by:** Facebook
   - **Key Features:**
-    - **Component-Based Architecture:** React is built around reusable components that encapsulate both the UI and the behavior. Components can be nested, managed, and reused.
+    - **Component-Based Architecture:** React is built around reusable components that encapsulate both the UI and the behaviour. Components can be nested, managed, and reused.
     - **JSX (JavaScript XML):** JSX is a syntax extension that allows you to write HTML-like code within JavaScript, making it easier to create and manage UI components.
       - Example:
         ```javascript
