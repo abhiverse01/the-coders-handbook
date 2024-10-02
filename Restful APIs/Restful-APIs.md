@@ -2,7 +2,7 @@
 
 #### **Introduction**
 
-In today's digital landscape, **RESTful APIs** are essential in enabling communication between different software applications. REST (Representational State Transfer) is an architectural style that allows systems to communicate over HTTP. In this guide, we will explore how to build RESTful APIs using two popular Python frameworks: **Flask** and **Django**. By the end, you'll have a strong foundation in building, scaling, and consuming APIs.
+In today's digital landscape, **RESTful APIs** enable communication between different software applications. REST (Representational State Transfer) is an architectural style that allows systems to communicate over HTTP. This guide will explore how to build RESTful APIs using two popular Python frameworks: **Flask** and **Django**. By the end, you'll have a strong foundation in building, scaling, and consuming APIs.
 
 ### **1. What is a REST API?**
 
@@ -20,7 +20,7 @@ RESTful APIs are designed around **resources**, identified by URLs, and manipula
 - Flexibility allows developers to choose components as needed.
 
 #### **Django**  
-- Full-featured and "batteries included," with tools like Django REST Framework (DRF).
+- It is fully featured and "batteries included," with tools like Django REST Framework (DRF).
 - Better suited for larger, more complex applications with built-in admin features.
 
 ### **3. Setting Up the Environment**
