@@ -8,7 +8,7 @@
 - In Python, statements end with a newline, not a semicolon, whereas in C++, statements end with a semicolon `;`.
 - Python uses indentation to define blocks of code (like loops or functions), while C++ uses curly braces `{}`.
 
-**Semantics**, on the other hand, is about what the code actually does. It's the meaning behind the syntax. Even if your syntax is correct, the semantics could be wrong if your logic is flawed.
+**Semantics**, on the other hand, is about what the code does. It's the meaning behind the syntax. Even if your syntax is correct, the semantics could be wrong if your logic is flawed.
 
 ### Examples of Semantics:
 - `if (x = 5)` in Python or C++ assigns 5 to `x`, but semantically, it’s likely wrong because you probably meant to check if `x` equals 5 (`if (x == 5)`).
@@ -50,7 +50,7 @@ Understanding data types and variables is foundational because they determine ho
 
 ## Control Structures (Loops, Conditionals)
 
-**Control Structures** manage the flow of your program. They allow your code to make decisions, repeat actions, and perform tasks conditionally.
+**Control Structures** Manage the flow of your program. They allow your code to make decisions, repeat actions, and perform tasks conditionally.
 
 ### Conditionals:
 Conditionals allow your code to take different paths based on certain conditions.
