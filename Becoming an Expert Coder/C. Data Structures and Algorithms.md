@@ -66,7 +66,7 @@ These data structures form the backbone of many algorithms and are critical for 
           'F': ['C', 'E']
       }
       ```
-  - Graphs are widely used in networking (modeling connections), social networks, recommendation systems, and solving problems like the shortest path (Dijkstra’s algorithm).
+  - Graphs are widely used in networking (modelling connections), social networks, recommendation systems, and solving problems like the shortest path (Dijkstra’s algorithm).
 
 - **Heaps:**
   - A heap is a specialized tree-based data structure that satisfies the heap property. In a **max-heap**, for example, the parent node is always greater than or equal to its children.
