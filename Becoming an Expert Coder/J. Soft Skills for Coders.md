@@ -8,7 +8,7 @@
   - **Understanding the Problem:** The first step in problem-solving is thoroughly understanding the problem. This involves reading and re-reading the problem statement, identifying the requirements, and clarifying any ambiguities.
     - **Example:** Suppose you’re asked to build a feature that filters a list of products based on user-selected criteria. Before diving into the code, you should clearly understand what criteria need to be filtered (e.g., price, category, brand) and how the user will interact with the filter (e.g., checkboxes, sliders).
   - **Breaking Down the Problem:** Large problems can be overwhelming, so breaking them down into smaller, more manageable parts is crucial. This process is often called decomposition.
-    - **Example:** If you’re building an e-commerce website, you might break down the project into smaller tasks like setting up the product catalog, implementing the shopping cart, and integrating the payment gateway.
+    - **Example:** If you’re building an e-commerce website, you might break down the project into smaller tasks like setting up the product catalogue, implementing the shopping cart, and integrating the payment gateway.
   - **Algorithmic Thinking:** Once you’ve broken down the problem, you can start thinking about the algorithms or steps needed to solve each part. This involves considering different approaches, evaluating their efficiency, and selecting the most appropriate one.
     - **Example:** If you need to sort a list of items, you might compare different sorting algorithms (e.g., quicksort, mergesort) and choose the one that best fits your needs based on the size of the list and performance requirements.
   - **Iterative Refinement:** Often, the first solution you come up with isn’t perfect. Iterative refinement involves testing your solution, identifying shortcomings, and improving it until you achieve the desired result.
@@ -19,7 +19,7 @@
     - **Example:** If you assume that all input data will be well-formed and within expected ranges, you might miss edge cases where the data is malformed or out of range. Critical thinking prompts you to handle these cases gracefully.
   - **Evaluating Trade-offs:** Every decision in coding involves trade-offs. Critical thinking helps you evaluate the pros and cons of different approaches and make informed decisions.
     - **Example:** You might have to choose between a quick solution that’s easy to implement but not scalable and a more complex solution that takes longer to implement but can handle future growth. Evaluating these trade-offs helps you choose the best path forward.
-  - **Logical Reasoning:** Logical reasoning involves following a structured thought process to arrive at a conclusion. This is essential in debugging and troubleshooting, where you need to systematically isolate the cause of an issue.
+  - **Logical Reasoning:** Logical reasoning involves following a structured thought process to conclude. This is essential in debugging and troubleshooting, where you need to systematically isolate the cause of an issue.
     - **Example:** If a web page isn’t displaying correctly, you might use logical reasoning to check each potential cause in sequence, such as verifying that the HTML is correct, the CSS is applied properly, and the JavaScript is functioning as expected.
 
 **Problem-solving** and **critical thinking** are at the heart of coding. By developing these skills, you’ll be able to tackle complex challenges more effectively, write more robust code, and deliver better solutions.
@@ -38,7 +38,7 @@
       - **Share Knowledge:** Use code reviews as an opportunity to share best practices and introduce new techniques or tools to the team.
   - **Pair Programming:** Pair programming involves two developers working together on the same code, with one writing the code (the “driver”) and the other reviewing each line as it’s written (the “navigator”).
     - **Benefits:**
-      - **Improved Code Quality:** The navigator can catch errors and suggest improvements in real-time.
+      - **Improved Code Quality:** The navigator can catch errors and suggest improvements in real time.
       - **Knowledge Sharing:** Pair programming helps spread knowledge across the team, as developers learn from each other’s approaches and techniques.
 
 - **Communication:**
