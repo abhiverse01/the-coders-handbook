@@ -38,9 +38,9 @@ In essence, Docker creates a controlled, predictable environment for your app, w
 #### 3. **Why is Docker Portable?**
 
 To understand Docker’s portability, think of it like this:
-- Imagine you’re packing your lunch for work or school. You don’t just grab individual items and throw them into your bag. Instead, you put everything in a **lunchbox**: your sandwich, snacks, drink, and even utensils. Wherever you take this lunchbox, everything inside it is ready to go, and you don’t have to worry if the place you’re going to has utensils or cups — **everything you need is in the box**.
+- Imagine you’re packing your lunch for work or school. You don’t just grab individual items and throw them into your bag. Instead, you put everything in a **lunchbox**: your sandwich, snacks, drink, and even utensils. Wherever you take this lunchbox, everything inside is ready to go, and you don’t have to worry if the place you’re going to has utensils or cups — **everything you need is in the box**.
 
-Similarly, Docker is like this **lunchbox** for your application. It packages not only the app but all its required tools, libraries, and settings, so it can run anywhere, whether on your computer, a server, or in the cloud. The **Docker container** ensures your app has everything it needs.
+Similarly, Docker is like a lunchbox for your application. It packages not only the app but also all its required tools, libraries, and settings so it can run anywhere, whether on your computer, a server, or in the cloud. The Docker container ensures your app has everything it needs.
 
 ---
 
@@ -50,7 +50,7 @@ Before Docker, a common issue developers faced was this:
 - Your app works perfectly on your development machine.
 - But when you try to run it on another computer (like the production server), it breaks or behaves differently.
 
-This happens because different machines can have different versions of software, libraries, or even operating-system configurations. Something that works fine on your setup might not exist or work the same on someone else’s.
+This happens because different machines can have different software versions, libraries, or even operating system configurations. Something that works fine on your setup might not exist or work the same on someone else’s.
 
 **Docker eliminates this problem** by creating a container that behaves the same regardless of where it is run. The environment inside the container doesn’t depend on the host machine's specific configurations.
 
