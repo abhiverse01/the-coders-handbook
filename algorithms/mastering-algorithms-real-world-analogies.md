@@ -104,11 +104,11 @@ def bfs(graph, start):
 
 ### **3. Dynamic Programming**
 
-Dynamic programming is an optimization technique where you solve complex problems by breaking them into simpler subproblems, and storing the solutions to subproblems to avoid redundant work.
+Dynamic programming is an optimization technique where you solve complex problems by breaking them into simpler subproblems and storing the solutions to subproblems to avoid redundant work.
 
 #### **Memoization**: Solving a Puzzle Once
 
-Imagine you're solving a puzzle. Once you figure out part of the puzzle, you don't want to re-solve it when you encounter the same section later. Instead, you remember (or "memoize") your previous solutions and reuse them to save time.
+Imagine you're solving a puzzle. Once you figure out part of the puzzle, you don't want to resolve it when you encounter the same section later. Instead, you remember (or "memoize") your previous solutions and reuse them to save time.
 
 - **Key Points:**
   - Break problems into overlapping subproblems.
@@ -128,7 +128,7 @@ def fib(n, memo={}):
 
 ### **4. Graph Algorithms**
 
-Graphs represent networks of nodes connected by edges. They are incredibly useful for modeling real-world scenarios like road maps, computer networks, and social media.
+Graphs represent networks of nodes connected by edges. They are incredibly useful for modelling real-world scenarios like road maps, computer networks, and social media.
 
 #### **Dijkstra’s Algorithm**: Finding the Shortest Path in a City
 
@@ -163,4 +163,4 @@ def dijkstra(graph, start):
 
 Mastering algorithms is a crucial step in becoming an efficient and confident coder. By relating algorithms to everyday activities, you can build a strong conceptual understanding that helps you not only remember how they work but also how to implement them effectively.
 
-The key takeaway here is that algorithms, though seemingly abstract, can often be understood through real-life problem-solving techniques. Continue practicing these algorithms with real-world analogies, and you’ll soon find that they become second nature.
+The key takeaway here is that algorithms, though seemingly abstract, can often be understood through real-life problem-solving techniques. Continue practising these algorithms with real-world analogies, and you’ll soon find that they become second nature.
