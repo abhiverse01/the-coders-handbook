@@ -4,7 +4,7 @@ This curated collection offers essential documentation, guides, and cheat sheets
 
 ## Python Dependencies Management Using Poetry
 
-Effective dependency management is crucial in Python projects for consistency and stability. **Poetry** simplifies dependency management, virtual environments, and project packaging.
+Effective dependency management is crucial for consistency and stability in Python projects. **Poetry** simplifies dependency management, virtual environments, and project packaging.
 
 - **[Poetry Documentation](https://python-poetry.org/docs/)** - The official, comprehensive guide covering:
   - **Installation and Setup**: Instructions for installing Poetry and initializing a new or existing Python project, including virtual environment integration.
@@ -83,7 +83,7 @@ Mastering **Git** and **GitHub** is essential for collaborative software develop
   - **Components and Props**: Building and managing components and passing data through props.
   - **Hooks**: Utilizing React Hooks (`useState`, `useEffect`) for managing state and lifecycle.
   - **State Management**: Advanced state management techniques with React Context and Redux.
-  - **Routing**: Using `react-router-dom` for setting up routes in single-page applications.
+  - **Routing**: Using `react-router-dom` to set up single-page application routes.
   - **API Integration**: Fetching data using `fetch` or `axios` with React.
 
 ### Additional Resources:
@@ -98,7 +98,7 @@ Mastering **Git** and **GitHub** is essential for collaborative software develop
 **FastAPI** is a modern Python framework for building APIs quickly with automatic documentation.
 
 - **[FastAPI Documentation](https://fastapi.tiangolo.com/)** - Official guide providing:
-  - **Setup and Basics**: Installing FastAPI and creating your first endpoint.
+  - **Setup and Basics**: Install FastAPI and create your first endpoint.
   - **Path Parameters and Query Parameters**: Managing input data with URL parameters.
   - **Data Validation**: Using Pydantic models for automatic request validation.
   - **Asynchronous Endpoints**: Building high-performance APIs with asynchronous code.
