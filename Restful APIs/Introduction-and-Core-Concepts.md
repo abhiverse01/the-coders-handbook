@@ -91,4 +91,4 @@ By understanding these core concepts and choosing the right framework, you can e
 
 ---
 
-This section is more detailed, includes visual aids, and provides clear distinctions between Flask and Django, guiding users to make informed decisions based on their project needs. We shall now proceed to the next section: "Setting Up the Environment"!
+This section is detailed, includes visual aids, and provides clear distinctions between Flask and Django, guiding users to make informed decisions based on their project needs. We shall now proceed to the next section: "Setting Up the Environment"!
