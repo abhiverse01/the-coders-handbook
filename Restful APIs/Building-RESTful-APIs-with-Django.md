@@ -1,0 +1,293 @@
+# **Building RESTful APIs with Django**
+
+Django, combined with the **Django REST Framework (DRF)**, offers a powerful and comprehensive toolkit for building RESTful APIs. In this section, we’ll create a fully functional API that goes beyond basic CRUD, incorporating features like filtering, pagination, and authentication. We’ll provide detailed examples using views, serializers, and Django’s authentication system to build a robust and scalable API.
+
+## **1. Setting Up Django with DRF**
+
+Before we begin building our API, let’s set up a Django project integrated with DRF:
+
+1. **Install Django and DRF**:
+   ```bash
+   pipenv install django djangorestframework
+   ```
+
+2. **Start a New Django Project**:
+   ```bash
+   django-admin startproject django_crud_api
+   cd django_crud_api
+   ```
+
+3. **Create an App**:
+   ```bash
+   python manage.py startapp users
+   ```
+   - We’ll build our API within this `users` app, handling user-related operations like creating, retrieving, updating, and deleting user records.
+
+4. **Add the App and DRF to `INSTALLED_APPS`** in **`settings.py`**:
+   ```python
+   INSTALLED_APPS = [
+       ...
+       'rest_framework',
+       'users',
+   ]
+   ```
+
+## **2. Defining Models**
+
+In **`users/models.py`**, we define our `User` model:
+
+```python
+from django.db import models
+
+class User(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField(unique=True)
+    age = models.IntegerField(null=True, blank=True)
+
+    def __str__(self):
+        return self.name
+```
+
+## **3. Creating Serializers**
+
+In **`users/serializers.py`**, we create a DRF serializer to convert our model instances into JSON and validate incoming data:
+
+```python
+from rest_framework import serializers
+from .models import User
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['id', 'name', 'email', 'age']
+```
+- **`UserSerializer`**: A `ModelSerializer` that automatically includes the fields from the `User` model, simplifying the serialization process.
+
+## **4. Building CRUD Views**
+
+In **`users/views.py`**, we implement CRUD functionality using DRF’s **`ModelViewSet`**, which simplifies API creation by handling common patterns.
+
+```python
+from rest_framework import viewsets
+from .models import User
+from .serializers import UserSerializer
+
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+```
+- **`UserViewSet`**: Inherits from `ModelViewSet` to provide built-in methods for CRUD operations (`list`, `create`, `retrieve`, `update`, `destroy`).
+
+## **5. Configuring URLs**
+
+In **`users/urls.py`**, we use DRF’s router to automatically generate routes for our viewset:
+
+```python
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from .views import UserViewSet
+
+router = DefaultRouter()
+router.register(r'users', UserViewSet)
+
+urlpatterns = [
+    path('', include(router.urls)),
+]
+```
+
+Then, include the `users` app’s URLs in the **`django_crud_api/urls.py`**:
+
+```python
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('api/', include('users.urls')),
+]
+```
+
+## **6. Adding Filtering and Pagination**
+
+To enhance the API, we add filtering and pagination to allow clients to retrieve specific subsets of data efficiently.
+
+1. **Adding Django Filter Backend**:
+   - Install `django-filter`:
+     ```bash
+     pipenv install django-filter
+     ```
+   
+   - Update **`settings.py`**:
+     ```python
+     REST_FRAMEWORK = {
+         'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+         'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+         'PAGE_SIZE': 5,
+     }
+     ```
+
+2. **Implement Filtering and Pagination** in **`views.py`**:
+   ```python
+   from rest_framework import viewsets, filters
+   from django_filters.rest_framework import DjangoFilterBackend
+   from .models import User
+   from .serializers import UserSerializer
+
+   class UserViewSet(viewsets.ModelViewSet):
+       queryset = User.objects.all()
+       serializer_class = UserSerializer
+       filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
+       filterset_fields = ['age', 'email']
+       search_fields = ['name', 'email']
+       ordering_fields = ['name', 'age']
+   ```
+   - **`DjangoFilterBackend`**: Filters users by specified fields (e.g., `age` and `email`).
+   - **`SearchFilter`**: Enables search capabilities for `name` and `email`.
+   - **`OrderingFilter`**: Allows clients to order users by fields like `name` and `age`.
+
+## **7. Incorporating Authentication**
+
+DRF supports various authentication mechanisms, including session-based and token-based authentication. Here’s how to implement each:
+
+### **a. Token-based Authentication (using JWT)**
+
+1. **Install JWT Package**:
+   ```bash
+   pipenv install djangorestframework-simplejwt
+   ```
+
+2. **Update `settings.py`**:
+   ```python
+   REST_FRAMEWORK = {
+       'DEFAULT_AUTHENTICATION_CLASSES': [
+           'rest_framework_simplejwt.authentication.JWTAuthentication',
+       ],
+       'DEFAULT_PERMISSION_CLASSES': [
+           'rest_framework.permissions.IsAuthenticated',
+       ],
+   }
+   ```
+
+3. **Create Token URLs** in **`django_crud_api/urls.py`**:
+   ```python
+   from rest_framework_simplejwt.views import (
+       TokenObtainPairView,
+       TokenRefreshView,
+   )
+
+   urlpatterns = [
+       path('admin/', admin.site.urls),
+       path('api/', include('users.urls')),
+       path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+       path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+   ]
+   ```
+
+4. **Protect the View** in **`views.py`**:
+   - Update the view to require authentication:
+     ```python
+     from rest_framework.permissions import IsAuthenticated
+
+     class UserViewSet(viewsets.ModelViewSet):
+         queryset = User.objects.all()
+         serializer_class = UserSerializer
+         filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
+         filterset_fields = ['age', 'email']
+         search_fields = ['name', 'email']
+         ordering_fields = ['name', 'age']
+         permission_classes = [IsAuthenticated]
+     ```
+
+   - By adding `IsAuthenticated`, only authenticated users with a valid JWT token can access these endpoints.
+
+### **b. Session-based Authentication**
+
+1. **Add Session Middleware** in **`settings.py`**:
+   ```python
+   MIDDLEWARE = [
+       ...
+       'django.contrib.sessions.middleware.SessionMiddleware',
+       ...
+   ]
+
+   REST_FRAMEWORK = {
+       'DEFAULT_AUTHENTICATION_CLASSES': [
+           'rest_framework.authentication.SessionAuthentication',
+       ],
+   }
+   ```
+
+2. **Login Endpoint**:
+   - Use Django’s built-in login view or implement a custom login endpoint to manage sessions.
+
+3. **Using Session-based Authentication**:
+   - In this setup, when a user logs in through the login endpoint, Django creates a session and assigns a session ID stored in the client’s browser. All subsequent requests use this session ID to authenticate.
+
+## **8. Advanced Features: Permissions and Custom Actions**
+
+### **a. Custom Permissions**
+
+In **`users/permissions.py`**, we define custom permissions. For example, restricting access based on user roles:
+```python
+from rest_framework import permissions
+
+class IsAdminOrReadOnly(permissions.BasePermission):
+    def has_permission(self, request, view):
+        if request.method in permissions.SAFE_METHODS:
+            return True
+        return request.user and request.user.is_staff
+```
+
+- Apply this in the view:
+   ```python
+   from .permissions import IsAdminOrReadOnly
+
+   class UserViewSet(viewsets.ModelViewSet):
+       ...
+       permission_classes = [IsAdminOrReadOnly]
+   ```
+
+### **b. Custom Actions**
+
+You can add custom actions to handle specific functionality beyond CRUD operations. For instance, let’s add an action to retrieve users above a certain age.
+
+```python
+from rest_framework.decorators import action
+from rest_framework.response import Response
+
+class UserViewSet(viewsets.ModelViewSet):
+    ...
+    
+    @action(detail=False, methods=['get'])
+    def above_age(self, request):
+        age = request.query_params.get('age', None)
+        if age:
+            users = self.queryset.filter(age__gt=age)
+            serializer = self.get_serializer(users, many=True)
+            return Response(serializer.data)
+        return Response({"error": "Age parameter is required"}, status=400)
+```
+- **`@action`**: Creates a custom route `/users/above_age/` that retrieves users above a specified age.
+
+## **9. Testing the API**
+
+1. **Run the Migrations**:
+   ```bash
+   python manage.py makemigrations
+   python manage.py migrate
+   ```
+
+2. **Run the Server**:
+   ```bash
+   python manage.py runserver
+   ```
+
+3. **Testing with Postman or cURL**:
+   - Test
+
+ each endpoint for CRUD operations, filtering, and pagination.
+   - Test the JWT token-based authentication flow to verify access control.
+
+---
+
+This section covers building a Django REST API with advanced features like filtering, pagination, and authentication. It provides a comprehensive guide to setting up secure and efficient APIs with Django. We shall proceed to the next section on authentication and authorization. 
