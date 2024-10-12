@@ -1,6 +1,6 @@
 # **Introduction and Core Concepts: RESTful APIs, Flask, and Django**
 
-## **Introduction**
+## **Introduction** 
 
 In today’s digital era, applications must communicate seamlessly across different platforms and services. This is where **RESTful APIs** (Representational State Transfer) play a crucial role. REST is an architectural style that uses standard HTTP methods and status codes to facilitate client and server systems interactions. APIs built with REST are stateless, scalable, and easy to understand, making them ideal for modern web development.
 
