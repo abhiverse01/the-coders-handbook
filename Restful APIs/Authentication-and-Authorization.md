@@ -1,0 +1,256 @@
+# **Authentication and Authorization**
+
+Authentication and authorization are crucial aspects of securing APIs. In this section, we'll implement **JWT (JSON Web Token)**-based authentication in both **Flask** and **Django**. We’ll cover step-by-step token generation, expiration, verification, and securing API routes.
+
+## **What is JWT (JSON Web Token)?**
+
+A **JWT** is a compact, URL-safe token used for securely transmitting information between parties. JWTs are typically used to verify the identity of users and grant them access to protected routes.
+
+### **JWT Structure:**
+A JWT consists of three parts:
+1. **Header**: Specifies the algorithm used to sign the token (e.g., HMAC SHA256).
+2. **Payload**: Contains the claims (user information, token expiration, etc.).
+3. **Signature**: Verifies that the payload hasn’t been tampered with.
+
+Here’s an example JWT:
+```
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+```
+
+When a user logs in, the server generates a JWT and sends it to the client. The client stores this token (typically in **localStorage** or **cookies**) and includes it in the **Authorization** header of every request to protected routes.
+
+## **1. Setting Up JWT Authentication in Flask**
+
+### **Step 1: Install Required Libraries**
+We’ll use the `pyjwt` library to handle JWT in Flask.
+
+```bash
+pipenv install flask flask-jwt-extended
+```
+
+### **Step 2: Configure Flask for JWT**
+In **`app/__init__.py`**, configure Flask to use `flask-jwt-extended` for JWT management:
+
+```python
+from flask import Flask
+from flask_jwt_extended import JWTManager
+import os
+
+def create_app():
+    app = Flask(__name__)
+
+    app.config['JWT_SECRET_KEY'] = os.getenv('JWT_SECRET_KEY', 'supersecret')  # Secret key for signing JWTs
+    app.config['JWT_ACCESS_TOKEN_EXPIRES'] = 3600  # 1 hour
+
+    jwt = JWTManager(app)  # Initialize the JWT Manager
+
+    return app
+```
+- **`JWT_SECRET_KEY`**: This key is used to sign the tokens. Keep it secure.
+- **`JWT_ACCESS_TOKEN_EXPIRES`**: Defines how long the access token is valid (in seconds). Here, it is set to 1 hour.
+
+### **Step 3: Create User Login and Token Generation Route**
+In **`routes.py`**, we create a login route that generates a JWT upon successful authentication.
+
+```python
+from flask import request, jsonify
+from flask_jwt_extended import create_access_token
+from werkzeug.security import check_password_hash
+
+# Dummy user for demonstration
+users = {
+    "john@example.com": {
+        "password": "$pbkdf2-sha256$29000$dXFlf7...hashed_password_here"
+    }
+}
+
+@app.route('/login', methods=['POST'])
+def login():
+    data = request.get_json()
+
+    email = data.get('email')
+    password = data.get('password')
+
+    user = users.get(email)
+
+    if user and check_password_hash(user['password'], password):
+        access_token = create_access_token(identity=email)  # Generate JWT
+        return jsonify(access_token=access_token), 200
+    else:
+        return jsonify({"msg": "Bad username or password"}), 401
+```
+- **`create_access_token`**: Generates a JWT containing the user's email as the identity.
+- **`check_password_hash`**: Compares the hashed password from the database with the user-provided password.
+
+### **Step 4: Protecting Routes with JWT**
+Now, let’s protect certain routes and require users to present a valid JWT.
+
+```python
+from flask_jwt_extended import jwt_required, get_jwt_identity
+
+@app.route('/protected', methods=['GET'])
+@jwt_required()  # Ensures only authenticated users can access this route
+def protected():
+    current_user = get_jwt_identity()  # Retrieves the user's identity from the JWT
+    return jsonify(logged_in_as=current_user), 200
+```
+
+- **`@jwt_required()`**: This decorator ensures that the route is only accessible with a valid JWT.
+- **`get_jwt_identity()`**: Retrieves the user’s identity (in this case, the email) from the JWT.
+
+#### **Step 5: Token Expiration and Refresh**
+Tokens are usually short-lived for security reasons. Here’s how to handle token expiration and implement token refreshing:
+
+```python
+from flask_jwt_extended import create_refresh_token, jwt_refresh_token_required
+
+# Modify the login route to also return a refresh token
+@app.route('/login', methods=['POST'])
+def login():
+    data = request.get_json()
+    email = data.get('email')
+    password = data.get('password')
+    user = users.get(email)
+
+    if user and check_password_hash(user['password'], password):
+        access_token = create_access_token(identity=email)
+        refresh_token = create_refresh_token(identity=email)
+        return jsonify(access_token=access_token, refresh_token=refresh_token), 200
+    else:
+        return jsonify({"msg": "Bad username or password"}), 401
+
+# Route to refresh the access token
+@app.route('/refresh', methods=['POST'])
+@jwt_refresh_token_required
+def refresh():
+    current_user = get_jwt_identity()
+    new_access_token = create_access_token(identity=current_user)
+    return jsonify(access_token=new_access_token), 200
+```
+
+- **`create_refresh_token`**: Generates a long-lived refresh token.
+- **`@jwt_refresh_token_required`**: Protects the refresh route, requiring a valid refresh token.
+
+## **2. Setting Up JWT Authentication in Django**
+
+### **Step 1: Install Required Libraries**
+We’ll use **`djangorestframework-simplejwt`** for JWT handling in Django.
+
+```bash
+pipenv install djangorestframework-simplejwt
+```
+
+### **Step 2: Configure Django for JWT**
+In **`settings.py`**, configure DRF to use JWT authentication:
+
+```python
+INSTALLED_APPS = [
+    ...
+    'rest_framework',
+    'rest_framework_simplejwt',
+]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+}
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
+    'SIGNING_KEY': os.getenv('JWT_SECRET_KEY', 'supersecret'),  # Secret key
+}
+```
+- **`ACCESS_TOKEN_LIFETIME`**: Sets the token to expire after 60 minutes.
+- **`REFRESH_TOKEN_LIFETIME`**: Sets the refresh token to expire after 7 days.
+
+### **Step 3: Create User Login and Token Generation View**
+In **`users/views.py`**, we create a login endpoint that generates JWTs.
+
+```python
+from rest_framework_simplejwt.tokens import RefreshToken
+from rest_framework.response import Response
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate
+from rest_framework import status
+from rest_framework.decorators import api_view
+
+@api_view(['POST'])
+def login(request):
+    email = request.data.get('email')
+    password = request.data.get('password')
+    user = authenticate(request, username=email, password=password)
+
+    if user is not None:
+        refresh = RefreshToken.for_user(user)  # Generate tokens
+        return Response({
+            'access': str(refresh.access_token),
+            'refresh': str(refresh),
+        })
+    return Response({"msg": "Invalid credentials"}, status=status.HTTP_401_UNAUTHORIZED)
+```
+
+- **`authenticate()`**: Checks the user's credentials.
+- **`RefreshToken.for_user()`**: Generates both access and refresh tokens.
+
+### **Step 4: Protecting Routes with JWT**
+Next, we secure API routes in **`users/views.py`** by requiring valid JWTs.
+
+```python
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.decorators import api_view, permission_classes
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])  # Protects the route
+def protected_view(request):
+    user = request.user  # Gets the authenticated user
+    return Response({"message": f"Hello, {user.username}"})
+```
+
+- **`IsAuthenticated`**: Ensures that only authenticated users with valid JWTs can access the view.
+- **`request.user`**: Provides access to the current authenticated user.
+
+### **Step 5: Token Expiration and Refresh**
+To handle token refreshing, we add endpoints for refreshing tokens in **`urls.py`**:
+
+```python
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+)
+
+urlpatterns = [
+    ...
+    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+]
+```
+
+Now, the client can send a **POST** request to `/api/token/refresh/` with the refresh token to obtain a new access token.
+
+## **3. Token Expiration, Revocation, and Best Practices**
+
+### **Token Expiration**:
+Tokens should have a short lifespan to limit the damage if they are compromised. For
+
+
+
+ example:
+- **Access Token**: 15 minutes to 1 hour.
+- **Refresh Token**: 1 day to 7 days.
+
+### **Token Revocation**:
+Tokens can be revoked manually in scenarios where a user logs out or their access needs to be revoked (e.g., account compromise).
+
+In Django, we can track and revoke refresh tokens using a custom blacklist app or rely on third-party libraries like **`djangorestframework-simplejwt`**'s token blacklist feature.
+
+### **Best Practices**:
+- **Use HTTPS**: Always use HTTPS to prevent token interception.
+- **Store Tokens Securely**: Store access tokens in **httpOnly** cookies to prevent XSS attacks.
+- **Rotate Tokens**: Implement token rotation to ensure that access tokens are refreshed regularly.
+- **Token Scopes**: Consider using token scopes to limit what the token allows users to do.
+
+---
+
+This section provides a detailed, step-by-step guide to implementing JWT authentication in both Flask and Django, covering token generation, expiration, verification, and best practices.
