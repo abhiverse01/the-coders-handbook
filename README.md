@@ -4,6 +4,7 @@
 
 This repo contains the list of all the valuable resources, links, notes, and important collections that I utilized and collected throughout my developer journey. Keeping it open source, if anybody ever feels the guide for it.
 
+
 ## Table of Contents
 - [Introduction](#introduction)
 - [Becoming an Expert Coder](#becoming-an-expert-coder)
@@ -17,19 +18,36 @@ This repo contains the list of all the valuable resources, links, notes, and imp
   - [Coding for Performance](#coding-for-performance)
   - [Real-World Application Development](#real-world-application-development)
   - [Soft Skills for Coders](#soft-skills-for-coders)
-  - [Special Topics](#special-topics)
   - [Career Growth and Professional Development](#career-growth-and-professional-development)
+- [Courses](#courses)
+- [Emotional Intelligence in Coding](#emotional-intelligence-in-coding)
+- [Python](#python)
+  - [Functions in Python](#functions-in-python)
+- [Restful APIs](#restful-apis)
+- [Algorithms](#algorithms)
+  - [Mastering Algorithms with Real-World Analogies](#mastering-algorithms-with-real-world-analogies)
+- [Docker - 101](#docker-101)
+- [Documentation](#documentation)
+- [Good Git Repos](#good-git-repos)
+- [Good Links](#good-links)
+  - [Links and Blogs for R&D](#links-and-blogs-for-rd)
+- [Handy Tools](#handy-tools)
+- [Information](#information)
+  - [Facts and Information](#facts-and-information)
+- [Know Your Git](#know-your-git)
+  - [Git Commands](#git-commands)
+- [Motivation to Code](#motivation-to-code)
 - [Notes](#notes)
-  - [Development Notes](#development-notes)
-  - [Project Go-Through Notes](#project-go-through-notes)
+  - [Approaches to AI](#approaches-to-ai)
+- [Pipeline/TFX](#pipeline-tfx)
+  - [TFX Extensions](#tfx-extensions)
 - [Resources](#resources)
-  - [Courses](#courses)
-  - [Videos](#videos)
-  - [Articles](#articles)
-  - [Tools and Software](#tools-and-software)
+  - [Links](#links)
+- [The Dot(.) Files](#the-dot-files)
 - [Contribution](#contribution)
 - [License](#license)
 - [Contact](#contact)
+
 
 ## Introduction
 A comprehensive collection of resources, links, notes, and important collections gathered throughout my developer journey. This repository is open-source and available for anyone who may find it helpful.
