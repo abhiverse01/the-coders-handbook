@@ -85,11 +85,11 @@ Contributions are welcome! If you have valuable resources to add, please feel fr
 This project is licensed under the MIT License.
 
 ## Contact
-For any inquiries or suggestions, feel free to reach out.
+If you have any questions or suggestions, please feel free to reach out.
 
 #
 
-<p align="center"><strong> Abhishek Shah | The Coder's Handbook | 2024 </strong></p>
+<p align="center"><strong> Abhishek Shah | The Coder's Handbook | 2025 </strong></p>
 
 #
 
